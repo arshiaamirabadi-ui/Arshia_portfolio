@@ -483,7 +483,6 @@ button { font-family: inherit; }
 .live { right: 10px; opacity: 0; transition: opacity 0.2s; }
 .live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--playhead); margin-inline-end: 5px; vertical-align: middle; }
 .tile.playing .live { opacity: 1; }
-.note { max-width: 1080px; margin: 6px auto 0; color: var(--muted); font-size: 0.9rem; }
 
 /* ================= reel banner ================= */
 .reel-banner { padding: 70px var(--pad) 20px; }
