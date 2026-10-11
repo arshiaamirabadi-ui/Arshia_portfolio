@@ -20,8 +20,8 @@ const HERO_VIDEO = "media/hero.mp4";
 const HERO_POSTER = "media/hero-poster.jpg";
 
 const CATEGORIES = [
-  { key: "msb", title: "Mind Soul Body", en: "SERIES · SAUDI ARABIA", desc: "سرپرستی انیمیشن و انیمیت شات‌ها در سه قسمت از مجموعه، محصول عربستان" },
-  { key: "mini", title: "Minicerilar", en: "SERIES · TURKEY", desc: "سرپرستی انیمیشن و انیمیت شات‌ها در سریال ترکی Minicerilar" },
+  { key: "msb", title: "Mind Soul Body", en: "SERIES · SAUDI ARABIA", desc: "سرپرستی انیمیشن و انیماتور در سه قسمت از مجموعه، محصول عربستان" },
+  { key: "mini", title: "Minicerilar", en: "SERIES · TURKEY", desc: "سرپرستی انیمیشن و انیماتور در سریال ترکی Minicerilar" },
   { key: "live", title: "ترکیب با تصویر زنده", en: "LIVE ACTION", desc: "کاراکتر سه‌بعدی گراز برای سریال «پایتخت» و کاراکتر پروانه برای جشنواره‌ای در تاجیکستان" },
   { key: "ad", title: "تبلیغات و تیزر", en: "COMMERCIAL", desc: "تیزر المپیک برای تلوبیون و تیزر و تابلوی سه‌بعدی «شمرون کباب»" },
   { key: "char", title: "انیمیشن کاراکتر", en: "CHARACTER", desc: "وزن، تعادل و تایمینگ" },
