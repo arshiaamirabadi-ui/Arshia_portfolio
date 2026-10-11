@@ -684,7 +684,10 @@ button { font-family: inherit; }
   .menu { display: none; }
   .hero-bottom { grid-template-columns: 1fr; }
   .ge { grid-template-columns: 1fr; }
-  .ge-panel { position: relative; top: auto; }
+  .ge-panel { top: 84px; z-index: 5; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85); }
+  #graph { aspect-ratio: 16 / 9; }
+  .ge { gap: 18px; }
+  .steps { padding-bottom: 30vh; }
   .exp-grid { grid-template-columns: 1fr; }
   .exp-side { position: static; }
   .contact { grid-template-columns: 1fr; }
