@@ -8,4 +8,4 @@
 `at` ثانیه‌ای است که آن کار در `media/reel.mp4` شروع می‌شود.
 
 ## انتشار
-Settings ← Pages ← Source: Deploy from a branch ← برنچ را انتخاب کن، پوشهٔ `/ (root)` ← Save
+Settings ← Pages ← Source: Deploy from a branch ← برنچ را انتخاب کن، پوشه‌ی `/ (root)` ← Save

@@ -245,7 +245,7 @@
     const pct = Math.round(p * 100);
     geMeter.style.width = pct + "%";
     gePct.textContent = fa(pct) + "٪";
-    geState.textContent = p < 0.3 ? "دادهٔ خام موشن‌کپچر" : p < 0.7 ? "در حال پاک‌سازی" : "منحنی تمیز با کلید";
+    geState.textContent = p < 0.3 ? "داده‌ی خام موشن‌کپچر" : p < 0.7 ? "در حال پاک‌سازی" : "منحنی تمیز با کلید";
     steps.forEach((s, i) => {
       const next = steps[i + 1];
       s.classList.toggle("on", p >= +s.dataset.at && (!next || p < +next.dataset.at));
