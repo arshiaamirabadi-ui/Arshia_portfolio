@@ -9,3 +9,8 @@
 
 ## انتشار
 Settings ← Pages ← Source: Deploy from a branch ← برنچ را انتخاب کن، پوشه‌ی `/ (root)` ← Save
+
+## نسخه‌ها
+- سایت اصلی (ریشه‌ی ریپازیتوری): https://arshiaamirabadi-ui.github.io/Arshia_portfolio/
+- نسخه‌ی کاری `v2/`: https://arshiaamirabadi-ui.github.io/Arshia_portfolio/v2/
+  تغییرات جدید فقط روی `v2/` انجام می‌شود. پوشه‌های `media/` و `fonts/` بین هر دو مشترک است.
