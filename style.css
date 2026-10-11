@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anton";
+  src: url("fonts/Anton-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #0a0a0c;
   --card: #121216;
@@ -328,7 +343,8 @@ img, video { display: block; max-width: 100%; }
 .pgrid.n2 { grid-template-columns: repeat(2, 1fr); }
 .pgrid.n3 { grid-template-columns: repeat(3, 1fr); }
 .pgrid.n6 { grid-template-columns: repeat(3, 1fr); }
-.pgrid.n3 .tile:first-child, .pgrid.n5 .tile:first-child, .pgrid.n6 .tile:first-child { grid-column: span 2; grid-row: span 2; }
+.pgrid.n7 .tile:nth-child(n+6) { grid-column: span 2; aspect-ratio: 32 / 9; }
+.pgrid.n3 .tile:first-child, .pgrid.n5 .tile:first-child, .pgrid.n6 .tile:first-child, .pgrid.n7 .tile:first-child { grid-column: span 2; grid-row: span 2; }
 .tile {
   position: relative;
   padding: 0;
@@ -557,6 +573,7 @@ img, video { display: block; max-width: 100%; }
   .pgrid, .pgrid.n2, .pgrid.n3, .pgrid.n6 { grid-template-columns: repeat(2, 1fr); }
   .pgrid .tile:first-child { grid-column: span 2 !important; grid-row: auto !important; aspect-ratio: 16 / 9 !important; }
   .pgrid.n2 .tile, .pgrid.n6 .tile:last-child { grid-column: span 2; }
+  .pgrid.n7 .tile:nth-child(n+6) { grid-column: auto; aspect-ratio: 16 / 9; }
   .tile-cap small { display: none; }
   .tile-code { display: none; }
   .hero-visual { width: 84vw; margin: 18px auto 32px; }

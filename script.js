@@ -52,7 +52,7 @@
             <img src="media/${w.id}.jpg" alt="${w.t}" loading="lazy">
             ${w.clip ? `<video muted loop playsinline preload="none" data-src="media/clip-${w.id}.mp4"></video>` : ""}
             <span class="tile-cap"><b>${w.t}</b><small>${w.m}</small></span>
-            ${w.code ? `<span class="tile-code" dir="ltr">${w.code}</span>` : ""}
+            ${w.code && w.code !== w.t ? `<span class="tile-code" dir="ltr">${w.code}</span>` : ""}
           </button>`
           )
           .join("")}
