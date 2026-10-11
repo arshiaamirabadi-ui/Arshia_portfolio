@@ -3,134 +3,213 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ارشیا امیرآبادی | انیماتور سه‌بعدی</title>
-  <meta name="description" content="پورتفولیو ارشیا امیرآبادی، انیماتور و سوپروایزر انیمیشن سه‌بعدی">
-  <meta property="og:title" content="ارشیا امیرآبادی | انیماتور سه‌بعدی">
-  <meta property="og:description" content="نمونه‌کارهای انیمیشن، سریال، سینمایی و تیزر">
+  <title>Arshia Amirabadi | 3D Animator</title>
+  <meta name="description" content="ارشیا امیرآبادی، انیماتور سه‌بعدی و سرپرست موشن‌کپچر">
+  <meta property="og:title" content="Arshia Amirabadi | 3D Animator">
+  <meta property="og:description" content="انیماتور سه‌بعدی و سرپرست موشن‌کپچر؛ سریال، سینما، تیزر">
+  <meta property="og:image" content="media/hero-poster.jpg">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Vazirmatn:wght@300;400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#top">ارشیا امیرآبادی</a>
+  <header class="nav" id="nav">
+    <a class="logo" href="#top" dir="ltr">ARSHIA<span>.</span></a>
     <nav>
-      <a href="#works">نمونه‌کارها</a>
+      <a href="#about">درباره</a>
+      <a href="#services">خدمات</a>
+      <a href="#projects">پروژه‌ها</a>
       <a href="#experience">سوابق</a>
-      <a href="#skills">مهارت‌ها</a>
-      <a href="#contact">ارتباط</a>
+      <a href="#contact">تماس</a>
     </nav>
+    <button class="pill-btn small" data-reel>دمو ریل ▶</button>
   </header>
 
   <main id="top">
+    <!-- ============ HERO ============ -->
     <section class="hero">
-      <p class="eyebrow">Animation Supervisor · 3D Animator</p>
-      <h1>ارشیا امیرآبادی</h1>
-      <p class="lead">
-        انیماتور و سوپروایزر انیمیشن سه‌بعدی با بیش از ۴ سال سابقه در سریال، فیلم سینمایی و تیزرهای تبلیغاتی.
-        به کاراکترها جان می‌دهم.
+      <h1 class="hero-title" dir="ltr">
+        <span class="line">HI, I'M</span>
+        <span class="line">ARSHIA</span>
+      </h1>
+      <div class="hero-visual">
+        <span class="orb o1"></span>
+        <span class="orb o2"></span>
+        <span class="ring o3"></span>
+        <button class="hero-window" data-reel aria-label="پخش دمو ریل">
+          <video id="heroVid" muted loop playsinline autoplay preload="auto"></video>
+          <span class="hw-play">▶</span>
+        </button>
+      </div>
+      <div class="hero-bottom">
+        <p class="hero-sub">
+          <b>انیماتور سه‌بعدی و سرپرست موشن‌کپچر.</b><br>
+          کاراکتر و آبجکت را دستی انیمیت می‌کنم، دادهٔ موشن‌کپچر را پاک‌سازی می‌کنم و در آنریل صحنه می‌چینم و رندر می‌گیرم.
+        </p>
+        <div class="hero-cta">
+          <a class="ghost-btn" href="#projects">نمونه‌کارها</a>
+          <button class="pill-btn" data-reel>پخش دمو ریل ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLIENT MARQUEE ============ -->
+    <section class="marquee" aria-label="همکاری‌ها">
+      <div class="marquee-track" id="marquee"></div>
+    </section>
+
+    <!-- ============ IMAGE STRIP ============ -->
+    <section class="strip" aria-hidden="true">
+      <div class="strip-track" id="strip"></div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <span class="orb float a1"></span>
+      <span class="orb float a2"></span>
+      <span class="ring float a3"></span>
+      <h2 class="display outline reveal" dir="ltr">ABOUT ME</h2>
+      <p class="about-text reveal">
+        من ارشیا امیرآبادی هستم؛ <b>چهار سال</b> است که در سریال، فیلم سینمایی و تبلیغات
+        به‌عنوان انیماتور و سرپرست انیمیشن کار می‌کنم و برای پروژه‌هایی از
+        <b>ایران، ترکیه، آذربایجان، عربستان و تاجیکستان</b> انیمیت کرده‌ام.
+        بیشترین تمرکزم روی بازی کاراکتر است: حرکتی که وزن، تایمینگ و حس درست داشته باشد.
       </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#works">دیدن نمونه‌کارها</a>
-        <a class="btn" href="#contact">تماس با من</a>
+      <div class="stats reveal">
+        <div><b>+۴</b><span>سال سابقه</span></div>
+        <div><b>+۱۱</b><span>پروژه</span></div>
+        <div><b>۵</b><span>کشور</span></div>
       </div>
-      <div id="showreel" class="showreel" hidden></div>
+      <a class="pill-btn reveal" href="#contact">تماس با من</a>
     </section>
 
-    <section id="works" class="section">
-      <h2>نمونه‌کارها</h2>
-      <div id="filters" class="filters" role="tablist"></div>
-      <div id="grid" class="grid"></div>
+    <!-- ============ SERVICES ============ -->
+    <section class="services light" id="services">
+      <h2 class="display reveal" dir="ltr">SERVICES</h2>
+      <ol class="service-list">
+        <li class="reveal">
+          <span class="num" dir="ltr">01</span>
+          <div><h3>سرپرستی ضبط و پاک‌سازی موشن‌کپچر</h3><p>حذف لرزش، پرش مارکر و لغزش پا؛ درست کردن تماس دست و پا و نشاندن حرکت روی ریگ کاراکتر.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="num" dir="ltr">02</span>
+          <div><h3>انیمیت دستی کاراکتر و آبجکت</h3><p>کی‌فریم در مایا برای حیوان‌ها، کاراکترهای کارتونی، بازی چهره و آبجکت‌هایی با وزن و تایمینگ درست.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="num" dir="ltr">03</span>
+          <div><h3>چیدمان، نور و رندر در آنریل</h3><p>کامل کردن شات در آنریل انجین: چیدمان محیط، نورپردازی و رندر نهایی.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="num" dir="ltr">04</span>
+          <div><h3>سرپرستی تیم انیمیشن</h3><p>مدیریت تیم انیمیت و کنترل کیفیت شات‌ها در سریال‌های بلند ایرانی، ترکی و عربی.</p></div>
+        </li>
+      </ol>
     </section>
 
-    <section id="experience" class="section">
-      <h2>سوابق کاری</h2>
-      <div class="timeline">
-        <article class="job">
-          <div class="job-head">
-            <h3>Animation Supervisor</h3>
-            <span class="when">مهر ۱۴۰۱ تا کنون</span>
-          </div>
-          <p class="org">ایفا تصویر آریا · تهران</p>
-          <ul>
-            <li>سوپروایزر انیمیت و انیماتور سریال ترکی <span dir="ltr">Minicerilar</span></li>
-            <li>سوپروایزر انیمیت سریال ترکی <span dir="ltr">Notlar</span></li>
-            <li>انیماتور پروژه سینمایی «کایت»</li>
-            <li>انیماتور پروژه آذری <span dir="ltr">Cirtdan</span></li>
-            <li>سوپروایزر انیمیت و انیماتور سریال «جوانمردان»</li>
-            <li>مدیر IT موسسه فرهنگی هنری ایفا تصویر آریا</li>
-          </ul>
-        </article>
-        <article class="job">
-          <div class="job-head">
-            <h3>Animation Supervisor</h3>
-            <span class="when">شهریور تا دی ۱۴۰۴</span>
-          </div>
-          <p class="org">آریا انیمیشن · تهران</p>
-          <ul>
-            <li>سوپروایزر انیمیت و انیماتور پروژه <span dir="ltr">Mind Soul Body</span>، محصول عربستان (سه قسمت از مجموعه)</li>
-          </ul>
-        </article>
-        <article class="job">
-          <div class="job-head">
-            <h3>Freelance Animator</h3>
-            <span class="when">فروردین ۱۴۰۱ تا کنون</span>
-          </div>
-          <p class="org">فری‌لنس</p>
-          <ul>
-            <li>انیمیت تیزر المپیک ۲۰۲۲ برای تلوبیون</li>
-            <li>انیمیت مجموعه تیزرهای «عدل ایران»</li>
-            <li>انیمیت کاراکتر پروانه برای جشنواره تاجیکستان</li>
-            <li>انیمیت کاراکتر گراز برای سریال «پایتخت»</li>
-            <li>انیمیت تیزر و تابلوی سه‌بعدی برای «شمرون کباب»</li>
-          </ul>
-        </article>
-      </div>
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects" id="projects">
+      <h2 class="display reveal" dir="ltr">PROJECTS</h2>
+      <p class="section-note reveal">نشانگر را روی هر کار نگه دارید تا کلیپش پخش شود؛ با کلیک، دمو ریل از همان شات باز می‌شود.</p>
+      <div class="stack" id="stack"></div>
+    </section>
 
-      <h2 class="sub">تحصیلات</h2>
-      <div class="edu">
-        <div class="card">
-          <h3>کارشناسی ارشد ارتباط تصویری</h3>
-          <p>دانشگاه آزاد اسلامی، واحد علوم و تحقیقات · از ۱۴۰۳</p>
+    <!-- ============ REEL BANNER ============ -->
+    <section class="reel-banner">
+      <button class="reel-card reveal" data-reel aria-label="پخش دمو ریل">
+        <img src="media/hero-poster.jpg" alt="" loading="lazy">
+        <span class="reel-text" dir="ltr">PLAY<br>REEL</span>
+        <span class="reel-play">▶</span>
+        <span class="reel-meta">دمو ریل · ۶ دقیقه</span>
+      </button>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="experience" id="experience">
+      <h2 class="display outline reveal" dir="ltr">EXPERIENCE</h2>
+      <div class="exp-list">
+        <div class="exp reveal">
+          <span class="exp-when">مهر ۱۴۰۱ — اکنون</span>
+          <div>
+            <h3>سرپرست انیمیشن · ایفا تصویر آریا</h3>
+            <p>سریال‌های ترکی <span dir="ltr">Minicerilar</span> و <span dir="ltr">Notlar</span>، سریال «جوانمردان»، سینمایی «کایت»، پروژهٔ آذربایجانی <span dir="ltr">Cirtdan</span> · مدیر IT مؤسسه</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>کارشناسی شیمی محض</h3>
-          <p>دانشگاه سمنان · ۱۳۹۷ تا ۱۴۰۲</p>
+        <div class="exp reveal">
+          <span class="exp-when">شهریور — دی ۱۴۰۴</span>
+          <div>
+            <h3>سرپرست انیمیشن · آریا انیمیشن</h3>
+            <p>سه قسمت از مجموعهٔ <span dir="ltr">Mind Soul Body</span>، محصول عربستان</p>
+          </div>
         </div>
+        <div class="exp reveal">
+          <span class="exp-when">فروردین ۱۴۰۱ — اکنون</span>
+          <div>
+            <h3>انیماتور آزاد</h3>
+            <p>تیزر المپیک تلوبیون، تیزرهای «عدل ایران»، پروانهٔ جشنوارهٔ تاجیکستان، گراز سریال «پایتخت»، تابلوی سه‌بعدی «شمرون کباب»</p>
+          </div>
+        </div>
+        <div class="exp reveal">
+          <span class="exp-when">تحصیلات</span>
+          <div>
+            <h3>کارشناسی ارشد ارتباط تصویری</h3>
+            <p>دانشگاه آزاد اسلامی، واحد علوم و تحقیقات · در حال تحصیل — کارشناسی شیمی محض، دانشگاه سمنان</p>
+          </div>
+        </div>
+      </div>
+      <div class="tools reveal">
+        <span class="hot">Maya</span><span>Unreal Engine</span><span>Motion Capture</span><span>3ds Max</span>
+        <span>Blender</span><span>Premiere</span><span>Photoshop</span><span>Python</span>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <h2>مهارت‌ها</h2>
-      <ul class="skills">
-        <li><b>Maya</b><span>پیشرفته</span></li>
-        <li><b>3ds Max</b><span>متوسط</span></li>
-        <li><b>Blender</b><span>متوسط</span></li>
-        <li><b>Unreal Engine</b><span>متوسط</span></li>
-        <li><b>Adobe Premiere</b><span>متوسط</span></li>
-        <li><b>Adobe Photoshop</b><span>مقدماتی</span></li>
-        <li><b>Python</b><span>مقدماتی</span></li>
-        <li><b>English</b><span>بالاتر از متوسط</span></li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section contact">
-      <h2>بیایید با هم کار کنیم</h2>
-      <p>برای همکاری یا سفارش پروژه پیام بدهید.</p>
-      <a class="btn primary big" href="mailto:arshia.fama@gmail.com" dir="ltr">arshia.fama@gmail.com</a>
+    <!-- ============ CONTACT ============ -->
+    <section class="contact light" id="contact">
+      <span class="orb float c1"></span>
+      <span class="bolt float c2"></span>
+      <h2 class="display reveal" dir="ltr">LET'S<br>GET IN<br>TOUCH</h2>
+      <div class="contact-side reveal">
+        <p>برای سریال، فیلم یا تیزر بعدی‌تان؛ انیمیت شات، سرپرستی تیم انیمیشن یا پاک‌سازی موشن‌کپچر.</p>
+        <a class="mail" href="mailto:arshia.fama@gmail.com" dir="ltr">arshia.fama@gmail.com</a>
+        <div class="contact-rows">
+          <a href="tel:+989914989383"><span>تلفن</span><b dir="ltr">0991 498 9383</b></a>
+          <a href="https://www.instagram.com/arshia.3a/" target="_blank" rel="noopener"><span>اینستاگرام</span><b dir="ltr">@arshia.3a</b></a>
+        </div>
+        <a class="pill-btn dark" href="mailto:arshia.fama@gmail.com">ارسال ایمیل ←</a>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">© ارشیا امیرآبادی</footer>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="foot-top">
+      <div class="foot-name" dir="ltr">ARSHIA<br>AMIRABADI</div>
+      <div class="foot-links">
+        <div>
+          <h4>شبکه‌ها</h4>
+          <a href="https://www.instagram.com/arshia.3a/" target="_blank" rel="noopener">اینستاگرام</a>
+          <a href="mailto:arshia.fama@gmail.com">ایمیل</a>
+        </div>
+        <div>
+          <h4>تماس</h4>
+          <a href="mailto:arshia.fama@gmail.com" dir="ltr">arshia.fama@gmail.com</a>
+          <a href="tel:+989914989383" dir="ltr">0991 498 9383</a>
+          <span>تهران، ایران</span>
+        </div>
+      </div>
+    </div>
+    <div class="shapes" aria-hidden="true">
+      <i class="s s1"></i><i class="s s2"></i><i class="s s3"></i><i class="s s4"></i>
+      <i class="s s5"></i><i class="s s6"></i><i class="s s7"></i><i class="s s8"></i>
+    </div>
+    <p class="copy" dir="ltr">© Arshia Amirabadi · 3D Animator</p>
+  </footer>
 
   <dialog id="lightbox" class="lightbox">
     <button class="close" aria-label="بستن">×</button>
-    <div class="lb-media"></div>
-    <div class="lb-info">
-      <h3></h3>
-      <p></p>
-    </div>
+    <video id="reel" controls playsinline preload="none"></video>
+    <div class="lb-info"><h3>دمو ریل ارشیا امیرآبادی</h3><p id="lbLabel"></p></div>
   </dialog>
 
   <script src="works.js"></script>
