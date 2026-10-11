@@ -628,7 +628,7 @@ button { font-family: inherit; }
 /* ================= footer ================= */
 .footer { padding: 90px var(--pad) 28px; overflow: hidden; }
 .foot-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
-.foot-name { font-weight: 900; font-size: clamp(3rem, 9vw, 7.5rem); line-height: 1.05; color: #34333b; }
+.foot-name { font-weight: 900; font-size: clamp(2.2rem, 7vw, 6rem); line-height: 1.1; color: #34333b; white-space: nowrap; }
 .foot-links { display: flex; gap: clamp(32px, 6vw, 90px); }
 .foot-links div { display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; color: var(--muted); }
 .foot-links h4 { margin: 0 0 6px; color: var(--text); font-size: 0.95rem; }
