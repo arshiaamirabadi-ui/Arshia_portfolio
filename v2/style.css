@@ -725,62 +725,66 @@ button { font-family: inherit; }
   html { scroll-behavior: auto; }
 }
 
-/* ================= 2D avatar ================= */
-.avatar {
-  position: absolute;
-  z-index: 4;
-  left: -19%;
-  bottom: -12%;
-  height: 122%;
-  aspect-ratio: 260 / 415;
+/* ================= 3D head (follows the pointer) ================= */
+.head-stage {
+  position: relative;
+  z-index: 2;
+  width: clamp(170px, min(22vw, 30svh), 300px);
+  aspect-ratio: 339 / 412;
+  margin: 18px auto 56px;
+  opacity: 0;
+  transform: translateY(24px) scale(0.92);
+  transition: opacity 0.7s ease, transform 0.9s cubic-bezier(.2,.9,.3,1.25);
+  will-change: transform;
+}
+.head-stage.ready { opacity: 1; transform: none; }
+.head-stage canvas {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.8s cubic-bezier(.2,.9,.3,1.3);
+  filter: drop-shadow(0 26px 30px rgba(0, 0, 0, 0.55)) drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+  animation: bob 4.2s ease-in-out infinite;
 }
-.avatar.ready { opacity: 1; transform: none; }
-.av-rig {
+@keyframes bob { 50% { transform: translateY(-7px); } }
+.head-glow {
   position: absolute;
-  inset: 0;
-  transform-origin: 50% 100%;
-  rotate: var(--lean, 0deg);
-  animation: breathe 3.4s ease-in-out infinite;
-}
-@keyframes breathe { 50% { transform: scaleY(1.01) translateY(-0.3%); } }
-.av-pose {
-  position: absolute;
-  height: auto;
-  max-width: none;
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: none;
-  opacity: 0;
-  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.45));
-}
-.av-pose.flip { transform: scaleX(-1); }
-.av-pose.on { opacity: 1; }
-.av-shadow {
-  position: absolute;
-  left: 26%;
-  right: 26%;
-  bottom: 0;
-  height: 3.5%;
+  inset: -18% -30% -6%;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.55), transparent);
-  transition: transform 0.36s ease, opacity 0.36s ease;
+  background: radial-gradient(closest-side, rgba(150, 120, 255, 0.35), rgba(255, 90, 170, 0.12) 55%, transparent 75%);
+  filter: blur(6px);
+  pointer-events: none;
 }
-.avatar.air .av-rig { animation: hop 0.36s cubic-bezier(.3,.7,.4,1) both; }
-.avatar.air .av-shadow { transform: scale(0.6); opacity: 0.5; }
-@keyframes hop { 0% { transform: translateY(0); } 50% { transform: translateY(-12%); } 100% { transform: translateY(-3%); } }
+.head-floor {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: -9%;
+  height: 7%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.6), transparent);
+  animation: floor 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes floor { 50% { transform: scale(0.88); opacity: 0.75; } }
+.head-stage.boing canvas { animation: boing 0.6s cubic-bezier(.3,1.6,.5,1) both; }
+@keyframes boing {
+  0% { transform: scale(1, 1); }
+  25% { transform: translateY(-16px) scale(0.94, 1.06); }
+  55% { transform: translateY(0) scale(1.06, 0.95); }
+  100% { transform: none; }
+}
 @media (max-width: 640px) {
-  .avatar { left: -6%; bottom: -9%; height: 108%; }
-  .hero-visual { margin-bottom: 64px; }
+  .head-stage { width: min(62vw, 250px); margin: 18px auto 52px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .avatar { opacity: 1; transform: none; }
+  .head-stage { opacity: 1; transform: none; }
 }
 
-/* play button moves to the right so the character doesn't cover it */
-.hero-window .hw-play { inset: auto 18px 18px auto; }
+/* v2: tighter hero so the head sits fully in the first screen */
+.hero { padding-top: 104px; }
+.hero-title { font-size: clamp(3rem, min(10vw, 12svh), 8rem); }
+.role { margin-top: 4px; }

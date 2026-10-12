@@ -4,19 +4,6 @@
   const fa = (n) => String(n).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
   const pad2 = (n) => String(n).padStart(2, "0");
 
-  /* ---------- hero video + timecode ---------- */
-  const heroVid = document.getElementById("heroVid");
-  heroVid.poster = HERO_POSTER;
-  if (reduce) heroVid.removeAttribute("autoplay");
-  heroVid.src = HERO_VIDEO;
-  const tc = document.getElementById("tc");
-  (function tick() {
-    const t = heroVid.currentTime || 0;
-    const s = Math.floor(t);
-    tc.textContent = `00:${pad2(Math.floor(s / 60))}:${pad2(s % 60)}:${pad2(Math.floor((t - s) * 25))}`;
-    requestAnimationFrame(tick);
-  })();
-
   /* ---------- marquee + image strip ---------- */
   const names = CLIENTS.map((c) => `<span>${c}</span>`).join("");
   document.getElementById("marquee").innerHTML = names + names;
@@ -102,7 +89,6 @@
     lbLabel.textContent = label || "";
     lightbox.showModal();
     document.body.style.overflow = "hidden";
-    heroVid.pause();
     const go = () => {
       try { reel.currentTime = t || 0; } catch (e) {}
       const p = reel.play();
@@ -114,7 +100,6 @@
   lightbox.addEventListener("close", () => {
     reel.pause();
     document.body.style.overflow = "";
-    if (!reduce) heroVid.play().catch(() => {});
   });
   lightbox.querySelector(".close").addEventListener("click", () => lightbox.close());
   lightbox.addEventListener("click", (e) => { if (e.target === lightbox) lightbox.close(); });
@@ -297,7 +282,7 @@
   } else fillDope();
 
   /* ---------- scroll loop ---------- */
-  const stage = document.getElementById("heroStage");
+  const stage = document.getElementById("headStage");
   let ticking = false;
   function onScroll() {
     if (ticking) return;

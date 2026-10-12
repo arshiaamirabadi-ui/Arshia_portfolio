@@ -47,7 +47,6 @@
       <span class="orb float h2o"></span>
       <span class="ring float h3o"></span>
       <div class="hero-in">
-        <p class="eyebrow">دمو ریل ۶ دقیقه‌ای</p>
         <h1 class="hero-title" dir="ltr">
           <span class="line">Arshia</span>
           <span class="line grad">Amirabadi</span>
@@ -55,16 +54,10 @@
         <p class="role">انیماتور سه‌بعدی و سرپرست موشن‌کپچر</p>
       </div>
 
-      <div class="hero-visual" id="heroStage">
-        <button class="hero-window" data-reel aria-label="پخش دمو ریل">
-          <video id="heroVid" muted loop playsinline autoplay preload="auto"></video>
-          <span class="hud"><span class="rec">دمو ریل</span><span id="tc" dir="ltr">00:00:00:00</span></span>
-          <span class="hw-play">▶</span>
-        </button>
-        <div class="avatar" id="avatar" role="img" aria-label="کاراکتر انیمیشنی ارشیا" title="روم کلیک کن!">
-          <span class="av-shadow"></span>
-          <div class="av-rig" id="avRig"></div>
-        </div>
+      <div class="head-stage" id="headStage">
+        <span class="head-glow" aria-hidden="true"></span>
+        <canvas id="headCv" width="339" height="412" role="img" aria-label="کاراکتر ارشیا که به نشانگر ماوس نگاه می‌کند"></canvas>
+        <span class="head-floor" aria-hidden="true"></span>
       </div>
 
       <div class="hero-bottom">
@@ -285,6 +278,6 @@
 
   <script src="works.js"></script>
   <script src="script.js"></script>
-  <script src="avatar.js"></script>
+  <script src="head.js"></script>
 </body>
 </html>
